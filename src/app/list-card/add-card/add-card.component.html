@@ -1,0 +1,34 @@
+<button mat-raised-button color="primary" routerLink="/list">Back to List</button> <br> <hr>
+<h1> Add New Content</h1>
+<form [formGroup]="contentForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput type="text" formControlName="title"> 
+  </mat-form-field> <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Content</mat-label>
+    <textarea matInput  formControlName="body"></textarea>
+  </mat-form-field> <br>
+  <button mat-raised-button color="primary" >Submit</button> <br> <hr>
+
+</form>
+
+<!-- <div class="container">
+
+ 
+  <form *ngIf="contentForm" [fromGroup]="contentForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" formControlName="title"> 
+    </mat-form-field> <br>
+
+    <mat-form-field appearance="fill" >
+      <mat-label>Content</mat-label>
+      <textarea matInput  formControlName="body"></textarea>
+    </mat-form-field> <br>
+
+    <button mat-raised-button color="primary" >Submit</button> <br> <hr>
+
+  </form>
+    
+</div> -->

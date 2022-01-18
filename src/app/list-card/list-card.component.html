@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Lists of Card</h1>
+    <div class="mat-app-background">
+      <div class="container">
+        <div class="row"> 
+          <div class="col-xs-12 col-md-8 col-md-offset-2"> 
+            <div class="my-5">
+              <button mat-raised-button color="primary" routerLink="/list/addcard">Add Card</button> <br> <hr>
+              <app-card
+              *ngFor="let l of lists; let i = index" 
+              [card]="l"
+              [id]="i"
+              routerLink="/detail/{{l.id}}"
+            ></app-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
